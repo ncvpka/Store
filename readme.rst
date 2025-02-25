@@ -1,71 +1,57 @@
-###################
-What is CodeIgniter
-###################
+# Web Mua Hàng & Thanh Toán QR - Cửa Hàng Tiện Lợi
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+## Giới Thiệu
+Dự án này là một website mạng xã hội máy tính cho cửa hàng tiện lợi, giúp khách hàng mua sắm và thanh toán bằng mã QR. Website được phát triển bằng **CodeIgniter 3**.
 
-*******************
-Release Information
-*******************
+## Tính Năng
+- 🛒 **Danh Mục Sản Phẩm**: Xem danh sách sản phẩm theo danh mục.
+- 👜 **Giỏ Hàng**: Thêm sản phẩm vào giỏ hàng, cập nhật số lượng.
+- ✉ **Đặt Hàng**: Nhập thông tin và xác nhận đặt hàng.
+- 💳 **Thanh Toán QR**: Hỗ trợ quét mã QR qua các hình thức thanh toán như MoMo, VNPay, ZaloPay.
+- 👨‍🏢 **Quản Lý Sản Phẩm**: Chủ cửa hàng có thể thêm/sửa/xóa sản phẩm.
+- 🔒 **Hệ Thống Xác Thực**: Đăng nhập/đăng ký và quản lý tài khoản.
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+## Biểu đồ usecase tổng quan
 
-**************************
-Changelog and New Features
-**************************
+## Công Nghệ Sử Dụng
+- **Backend**: PHP, CodeIgniter 3
+- **Frontend**: HTML, CSS, Bootstrap, jQuery
+- **CSDL**: MySQL
+- **Thênh toán QR**: API VNPay, MoMo, ZaloPay
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+## Cài Đặt & Chạy Dự Án
+### 1. Clone Repository
+```bash
+git clone https://github.com/your-repo/qr-shop-ci.git
+cd qr-shop-ci
+```
 
-*******************
-Server Requirements
-*******************
+### 2. Cài Đặt Môi Trường
+- **Cài đặt XAMPP/WAMP** (để chạy Apache & MySQL).
+- Copy file cấu hình CodeIgniter:
+```bash
+cp application/config/config.sample.php application/config/config.php
+cp application/config/database.sample.php application/config/database.php
+```
+- Cấu hình `config.php` và `database.php` cho phù hợp.
 
-PHP version 5.6 or newer is recommended.
+### 3. Import Database
+- Import file `database/qrshop.sql` vào MySQL.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+### 4. Chạy Ứng Dụng
+- Mở XAMPP, start Apache & MySQL.
+- Truy cập:
+  ```
+  http://localhost/qr-shop-ci/
+  ```
 
-************
-Installation
-************
+## Hướng Dẫn Thanh Toán QR
+1. Khi chọn thanh toán, chọn phương thức (MoMo, VNPay, ZaloPay).
+2. Hệ thống tạo mã QR.
+3. Mở app thanh toán và quét QR.
+4. Xác nhận giao dịch, nhận thông báo hoàn thành.
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+## Thông Tin Liên Hệ
+- 💻 Dev: **Nguyễn Chí VũVũ**
+- 🎨 GitHub: [Your GitHub](https://github.com/ncvpkancvpka)
+- 📧 Email: nguyenchivu2003@gmail.com
